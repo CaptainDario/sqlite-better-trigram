@@ -236,7 +236,7 @@ jobs:
       - name: Install node
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "24"
           registry-url: "https://registry.npmjs.org"
       - run: |
           npm publish --access public distx/npm/sqlite-better-trigram-darwin-arm64.tar.gz
@@ -246,5 +246,3 @@ jobs:
           npm publish --access public distx/npm/sqlite-better-trigram-windows-x64.tar.gz
           npm publish --access public distx/npm/sqlite-better-trigram-windows-arm64.tar.gz
           npm publish --access public distx/npm/sqlite-better-trigram.tar.gz
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
